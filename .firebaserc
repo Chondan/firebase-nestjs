@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "<DEVELOPMENT_ENVIRONMENT_PROJECT>",
+    "prod": "<PRODUCTION_ENVIRONMENT_PROJECT>"
+  }
+}

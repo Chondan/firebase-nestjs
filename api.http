@@ -1,0 +1,33 @@
+@host=http://localhost:5001/kku-server/asia-southeast1/api
+
+### Login
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "email": 12,
+    "password": "chondansusuwan"
+}
+
+### Books
+POST {{host}}/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query {
+    books {
+        title
+    }
+}
+
+### Create book
+POST {{host}}/graphql
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+mutation {
+    createBook(createBookInput:{id: 3, title: "Math", author: "Newton"}) {
+        title,
+        author
+    }
+}
